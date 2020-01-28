@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - node
+script:
+  - npm run build:test
+  - npm run build:prod
+deploy:
+  - provider: s3
+    access_key_id: "$DIGITAL_OCEAN_SPACES_KEY_ID"
+    secret_access_key: "$DIGITAL_OCEAN_SPACES_ACCESS_KEY"
+    bucket: "$DIGITAL_OCEAN_SPACES_BUCKET"
+    endpoint: "$DIGITAL_OCEAN_SPACES_ENDPOINT"
+    cache-control: "max-age=31536000"
+    local_dir: dist
+    skip_cleanup: true
+    acl: public_read
+    on:
+      branch: random
+  - provider: s3
+    access_key_id: "$DIGITAL_OCEAN_SPACES_KEY_ID"
+    secret_access_key: "$DIGITAL_OCEAN_SPACES_ACCESS_KEY"
+    bucket: "$DIGITAL_OCEAN_SPACES_BUCKET_TEST"
+    endpoint: "$DIGITAL_OCEAN_SPACES_ENDPOINT"
+    cache-control: "max-age=31536000"
+    local_dir: dist
+    skip_cleanup: true
+    acl: public_read
+    on:
+      branch: random
