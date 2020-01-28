@@ -1,0 +1,51 @@
+{
+  "name": "ampath-poc-releasing",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "A repository to manage the releasing of AMPATH micro-frontends (es modules)",
+  "main": "index.js",
+  "scripts": {
+    "build": "packmap -o openmrs/frontend --override-map ./override-import-map.json --exclude-packages ./exclude-packages.json",
+    "build:beta": "packmap -o openmrs/frontend",
+    "build:prod": "packmap -o openmrs/frontend",
+    "build:test": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AMPATH/ampath-poc-releasing.git"
+  },
+  "keywords": [
+    "es6",
+    "POC",
+    "es6 modules",
+    "releasing",
+    "packmap",
+    "AMPATH",
+    "AMPATH POC",
+    "OpenMRS"
+  ],
+  "author": "AMPATH Developers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AMPATH/ampath-poc-releasing/issues"
+  },
+  "homepage": "https://github.com/AMPATH/ampath-poc-releasing#readme",
+  "devDependencies": {
+    "@ampath-kenya/packmap": "^1.2.0-beta.1"
+  },
+  "dependencies": {
+    "@openmrs/esm-api": "^1.0.4",
+    "@openmrs/esm-devtools": "^1.1.0",
+    "@openmrs/esm-error-handling": "^1.0.1",
+    "@openmrs/esm-home": "^1.0.0",
+    "@openmrs/esm-login": "^1.1.0",
+    "@openmrs/esm-primary-navigation": "^1.0.0",
+    "@openmrs/esm-root-config": "^1.1.1",
+    "@openmrs/esm-styleguide": "^1.2.0",
+    "import-map-overrides": "1.8.0",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "rxjs": "^6.5.3",
+    "single-spa": "^4.4.1",
+    "systemjs": "6.1.1"
+  }
+}
