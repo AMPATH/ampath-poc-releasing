@@ -5,7 +5,8 @@ script:
   - npm run build -- --base-url $IMPORT_MAP_BASE_URL_TEST
   - mkdir -p test
   - tar cf - ./openmrs |(cd ./test; tar xvf -)
-  - pwd
+  - rm -r ./openmrs
+  - echo $TRAVIS_BRANCH
   - npm run build:prod -- --base-url $IMPORT_MAP_BASE_URL_TEST
 deploy:
   - provider: s3
@@ -30,3 +31,6 @@ deploy:
     acl: public_read
     on:
       branch: master
+after_deploy:
+  - STATUS_CODE=$(curl -u $DEPLOYER_USERNAME:$DEPLOYER_PASSWORD -d '@openmrs-esm-requirements.json' -X PATCH $DEPLOYER_HOST/import-map.json\?env=test -H "Accept:application/json" -H "Content-Type:application/json")
+  - if [ "$STATUS_CODE" -ne 200 ]; then travis_terminate "$STATUS_CODE"; fi

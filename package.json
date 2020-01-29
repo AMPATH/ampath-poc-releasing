@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "packmap -o openmrs/frontend --override-map ./override-import-map.json --exclude-packages ./exclude-packages.json",
-    "build:prod": "packmap -o openmrs/frontend",
-    "build:test": "npm run build"
+    "build:prod": "packmap -o openmrs/frontend --override-map ./override-import-map.json"
   },
   "repository": {
     "type": "git",
