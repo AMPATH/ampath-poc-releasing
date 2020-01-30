@@ -9,16 +9,16 @@ script:
   - npm run build:prod -- --base-url $IMPORT_MAP_BASE_URL
   - mkdir -p prod
   - tar cf - ./openmrs |(cd ./prod; tar xvf -)
-  - TAG_VERSION=$(echo $TRAVIS_TAG | sed 's/[^0-9]*//g')
-  - TAG_MAJOR_VERSION=$(echo $TAG_VERSION | cut -c 1-2 )
-  - PROD_VERSION=$(echo $CURRENT_PROD_VERSION | sed 's/[^0-9]*//g')
-  - PROD_MAJOR_VERSION=$(echo $PROD_VERSION | cut -c 1-2)
+  - export TAG_VERSION=$(echo $TRAVIS_TAG | sed 's/[^0-9]*//g')
+  - export TAG_MAJOR_VERSION=$(echo $TAG_VERSION | cut -c 1-2 )
+  - export PROD_VERSION=$(echo $CURRENT_PROD_VERSION | sed 's/[^0-9]*//g')
+  - export PROD_MAJOR_VERSION=$(echo $PROD_VERSION | cut -c 1-2)
   - echo "TAG_VERSION" $TAG_VERSION
   - echo "TAG_MAJOR_VERSION" $TAG_MAJOR_VERSION
   - echo "PROD_VERSION" $PROD_VERSION
   - echo "PROD_MAJOR_VERSION" $PROD_MAJOR_VERSION
-  - DEPLOY_PROD=$(if [[ ! -z "$TRAVIS_TAG" && "$TAG_VERSION" == "$PROD_VERSION" ]]; then echo "1"; else echo "0"; fi)
-  - DEPLOY_BETA=$(if [[ ! -z "$TRAVIS_TAG" && $TAG_MAJOR_VERSION -gt $PROD_MAJOR_VERSION ]]; then echo "1";  else echo "0"; fi)
+  - export DEPLOY_PROD=$(if [[ ! -z "$TRAVIS_TAG" && "$TAG_VERSION" == "$PROD_VERSION" ]]; then echo "1"; else echo "0"; fi)
+  - export DEPLOY_BETA=$(if [[ ! -z "$TRAVIS_TAG" && $TAG_MAJOR_VERSION -gt $PROD_MAJOR_VERSION ]]; then echo "1";  else echo "0"; fi)
   - echo $DEPLOY_PROD
   - echo $DEPLOY_BETA
 deploy:
@@ -47,6 +47,11 @@ deploy:
       branch: master
 after_deploy:
   - TEST_STATUS_CODE=$(bash ./scripts/update-test-import-map.sh)
-  - echo $TEST_STATUS_CODE
   - if [ -z "$TEST_STATUS_CODE" ]; then travis_terminate "$TEST_STATUS_CODE"; fi
   - if [ "$TEST_STATUS_CODE" -ne 200 ]; then travis_terminate "$TEST_STATUS_CODE"; fi
+  - BETA_STATUS_CODE=$(bash ./scripts/update-beta-import-map.sh)
+  - if [ -z "$BETA_STATUS_CODE" ]; then travis_terminate "$BETA_STATUS_CODE"; fi
+  - if [ "$BETA_STATUS_CODE" -ne 200 ]; then travis_terminate "$BETA_STATUS_CODE"; fi
+  - PROD_STATUS_CODE=$(bash ./scripts/update-prod-import-map.sh)
+  - if [ -z "$PROD_STATUS_CODE" ]; then travis_terminate "$PROD_STATUS_CODE"; fi
+  - if [ "$PROD_STATUS_CODE" -ne 200 ]; then travis_terminate "$PROD_STATUS_CODE"; fi
