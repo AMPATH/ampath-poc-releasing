@@ -32,5 +32,8 @@ deploy:
     on:
       branch: master
 after_deploy:
-  - STATUS_CODE=$(curl -u $DEPLOYER_USERNAME:$DEPLOYER_PASSWORD -d '@openmrs-esm-requirements.json' -X PATCH $DEPLOYER_HOST/import-map.json\?env=test -H "Accept:application/json" -H "Content-Type:application/json")
+  - cd ./test/openmrs/frontend/
+  - STATUS_CODE=$(curl --output /dev/null --write-out %{http_code} -u $DEPLOYER_USERNAME:$DEPLOYER_PASSWORD -d '@import-map.json' -X PATCH $DEPLOYER_HOST/import-map.json\?env=test -H "Accept:application/json" -H "Content-Type:application/json")
+  - pwd
+  - echo $STATUS_CODE
   - if [ "$STATUS_CODE" -ne 200 ]; then travis_terminate "$STATUS_CODE"; fi

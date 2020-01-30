@@ -1,4 +1,5 @@
 {
   "imports": {
+    "@openmrs/esm-error-handling": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-error-handling/362a79a59c5f6377c45dde1a48836ab5d210a9c9/openmrs-esm-error-handling.js"
   }
 }
