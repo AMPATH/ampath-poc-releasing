@@ -44,9 +44,14 @@ deploy:
     skip_cleanup: true
     acl: public_read
     on:
-      branch: master
+      branch: deploy-prod
 after_deploy:
   - TEST_STATUS_CODE=$(bash ./scripts/update-test-import-map.sh)
-  - echo $TEST_STATUS_CODE
   - if [ -z "$TEST_STATUS_CODE" ]; then travis_terminate "$TEST_STATUS_CODE"; fi
   - if [ "$TEST_STATUS_CODE" -ne 200 ]; then travis_terminate "$TEST_STATUS_CODE"; fi
+  - BETA_STATUS_CODE=$(bash ./scripts/update-beta-import-map.sh)
+  - if [ -z "$BETA_STATUS_CODE" ]; then travis_terminate "$BETA_STATUS_CODE"; fi
+  - if [ "$BETA_STATUS_CODE" -ne 200 ]; then travis_terminate "$BETA_STATUS_CODE"; fi
+  - PROD_STATUS_CODE=$(bash ./scripts/update-prod-import-map.sh)
+  - if [ -z "$PROD_STATUS_CODE" ]; then travis_terminate "$PROD_STATUS_CODE"; fi
+  - if [ "$PROD_STATUS_CODE" -ne 200 ]; then travis_terminate "$PROD_STATUS_CODE"; fi
