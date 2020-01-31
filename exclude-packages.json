@@ -1,5 +1,4 @@
 {
-  "@openmrs/esm-devtools": "any",
   "@babel/runtime": "any",
   "void-elements": "any"
 }
