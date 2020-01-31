@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AMPATH</title>
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="/openmrs/images/openmrs-favicon.ico" /> -->
+  <!-- <base href="/openmrs/spa/" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+
+    function onAmrsPocClicked() {
+      eraseCookie('import-map-override-url');
+      window.location = "https://kibana.ampath.or.ke/amrs-backup/spa/login";
+    }
+
+    function onAmrsPocBetaClicked() {
+      setCookie('import-map-override-url', '//ampath-poc.fra1.digitaloceanspaces.com/import-map-beta.json', 20);
+      window.location = "https://kibana.ampath.or.ke/amrs-backup/spa/login";
+    }
+
+    function onAmrsPocTestClicked() {
+      setCookie('import-map-override-url', '//ampath-poc-test.fra1.digitaloceanspaces.com/import-map.json', 20);
+      window.location = "https://kibana.ampath.or.ke/amrs-backup/spa/login";
+    }
+
+    function setCookie(name, value, days) {
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000); // ) removed
+        var expires = "; expires=" + date.toGMTString(); // + added
+      }
+      else
+        var expires = "";
+      document.cookie = name + "=" + value + expires + ";Secure;path=/;domain=.ampath.or.ke"; // + and " added
+    }
+
+    function eraseCookie(name) {
+      document.cookie = name + '=;Secure;path=/;domain=.ampath.or.ke;Max-Age=-99999999';
+    }
+  </script>
+</head>
+
+<body>
+  <hr />
+  <h2>Welcome to AMPATH</h2>
+  <hr />
+  <div>
+    <button id="amrsPOC" onclick="onAmrsPocClicked()" style="height: 150px; width: 150px; cursor:pointer;"><span
+        style="color: blue; font-size:larger;">AMRS POC</span></button>
+    <button id="amrsPOCBeta" onclick="onAmrsPocBetaClicked()" style="height: 150px; width: 150px;cursor:pointer;"><span
+        style="color: blue; font-size:larger;">AMRS POC
+        Beta</span></button>
+    <button id="amrsPOCTest" onclick="onAmrsPocTestClicked()" style="height: 150px; width: 150px;cursor:pointer;"><span
+        style="color: blue; font-size:larger;">AMRS POC
+        Test</span></button>
+  </div>
+</body>
+
+</html>
