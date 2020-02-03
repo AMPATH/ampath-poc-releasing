@@ -8,6 +8,14 @@
     "i18next": "https://cdn.jsdelivr.net/npm/i18next@19.0.0/dist/umd/i18next.min.js",
     "react-i18next": "https://cdn.jsdelivr.net/npm/react-i18next@11.2.1/dist/umd/react-i18next.min.js",
     "@openmrs/esm-root-config": "https://ampath-poc.fra1.digitaloceanspaces.com/root-config/78bd42a708961de6a9c71503faecb075842fab74/root-config.js",
-    "@openmrs/esm-error-handling": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-error-handling/362a79a59c5f6377c45dde1a48836ab5d210a9c9/openmrs-esm-error-handling.js"
+    "@openmrs/esm-login": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-login/17176b1de3e763b56ffb16e29e0c77a90d43f185/openmrs-esm-login.js",
+    "@openmrs/esm-devtools": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-devtools/a369ce5b12f41e1cc51d30878f3734f9d6d6e167/openmrs-esm-devtools.js",
+    "@openmrs/esm-api": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-api/c9a8c183e5fceded87de685349d44d2e0dd46836/openmrs-esm-api.js",
+    "@openmrs/esm-styleguide": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-styleguide/019014de8cd36e6fd876a7403a4283a36648b8a1/openmrs-esm-styleguide.js",
+    "@openmrs/esm-home": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-home/a92349a333de3e389e06bb2d8665e5bbb94d1189/openmrs-esm-home.js",
+    "@openmrs/esm-primary-navigation": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-primary-navigation/5df488cfece57d0c1f9f2e838712a9f533c853b4/openmrs-esm-primary-navigation.js",
+    "@openmrs/esm-error-handling": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-error-handling/362a79a59c5f6377c45dde1a48836ab5d210a9c9/openmrs-esm-error-handling.js",
+    "@openmrs/esm-patient-chart": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-patient-chart/28792c51d78cfc315491621a37c6f0635ae63325/openmrs-esm-patient-chart.js",
+    "@openmrs/esm-module-config": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-module-config/77522c94d14925894b0af6f0b0c6019a6788f393/openmrs-esm-module-config.js"
   }
 }
