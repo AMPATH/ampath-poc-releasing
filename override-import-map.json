@@ -4,6 +4,7 @@
     "react": "https://cdn.jsdelivr.net/npm/react@16.12.0/umd/react.production.min.js",
     "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.12.0/umd/react-dom.production.min.js",
     "react-router": "https://cdn.jsdelivr.net/npm/react-router@5.1.2/umd/react-router.js",
+    "react-router-dom": "https://cdn.jsdelivr.net/npm/react-router-dom@5.1.2/umd/react-router-dom.js",
     "rxjs": "https://cdn.jsdelivr.net/npm/rxjs@6.5.3/bundles/rxjs.umd.min.js",
     "i18next": "https://cdn.jsdelivr.net/npm/i18next@19.0.0/dist/umd/i18next.min.js",
     "react-i18next": "https://cdn.jsdelivr.net/npm/react-i18next@11.2.1/dist/umd/react-i18next.min.js",
