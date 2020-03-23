@@ -8,7 +8,7 @@
     "rxjs": "https://cdn.jsdelivr.net/npm/rxjs@6.5.3/bundles/rxjs.umd.min.js",
     "i18next": "https://cdn.jsdelivr.net/npm/i18next@19.0.0/dist/umd/i18next.min.js",
     "react-i18next": "https://cdn.jsdelivr.net/npm/react-i18next@11.2.1/dist/umd/react-i18next.min.js",
-    "@openmrs/esm-root-config": "https://ampath-poc-test.fra1.digitaloceanspaces.com/root-config/27254a2650d3e87da60d1043f63c723be15fc141/root-config.js",
+    "@openmrs/esm-root-config": "https://ampath-poc-test.fra1.digitaloceanspaces.com/root-config/bc57988da5986847074975fff5bfb508f95ff48a/root-config.js",
     "@openmrs/esm-login": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-login/0cf4bf14067e67f665bd587fa5b4198761cf7edc/openmrs-esm-login.js",
     "@openmrs/esm-devtools": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-devtools/e8db3318da7a5dc5cfe32925b57303dff127447b/openmrs-esm-devtools.js",
     "@openmrs/esm-api": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-api/2648588c1dee4db40b1a663cf986cf0f9bd71a75/openmrs-esm-api.js",
