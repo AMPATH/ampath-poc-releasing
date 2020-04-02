@@ -13,17 +13,17 @@
 
     function onAmrsPocClicked() {
       eraseCookie('import-map-override-url');
-      window.location = "https://kibana.ampath.or.ke/amrs-backup/spa/login";
+      window.location = "https://kibana.ampath.or.ke/amrs/spa/login";
     }
 
     function onAmrsPocBetaClicked() {
       setCookie('import-map-override-url', '//ampath-poc.fra1.digitaloceanspaces.com/import-map-beta.json', 20);
-      window.location = "https://kibana.ampath.or.ke/amrs-backup/spa/login";
+      window.location = "https://kibana.ampath.or.ke/amrs/spa/login";
     }
 
     function onAmrsPocTestClicked() {
       setCookie('import-map-override-url', '//ampath-poc-test.fra1.digitaloceanspaces.com/import-map.json', 20);
-      window.location = "https://kibana.ampath.or.ke/amrs-backup/spa/login";
+      window.location = "https://kibana.ampath.or.ke/amrs/spa/login";
     }
 
     function setCookie(name, value, days) {
