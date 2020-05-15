@@ -8,16 +8,16 @@
     "rxjs": "https://cdn.jsdelivr.net/npm/rxjs@6.5.3/bundles/rxjs.umd.min.js",
     "i18next": "https://cdn.jsdelivr.net/npm/i18next@19.0.0/dist/umd/i18next.min.js",
     "react-i18next": "https://cdn.jsdelivr.net/npm/react-i18next@11.2.1/dist/umd/react-i18next.min.js",
-    "@openmrs/esm-root-config": "https://ampath-poc-test.fra1.digitaloceanspaces.com/root-config/792a5c6d3e740d8886c4331b9977b5bf3dc3a19c/root-config.js",
-    "@openmrs/esm-login": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-login/b4fec76945248d7a77604904826123202883f1c3/openmrs-esm-login.js",
-    "@openmrs/esm-devtools": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-devtools/0e9f12612d714090616d5457ac4724eb28076dbf/openmrs-esm-devtools.js",
-    "@openmrs/esm-api": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-api/506e9a956275485d92f72b1b3e5afa7d98ae2fdb/openmrs-esm-api.js",
-    "@openmrs/esm-styleguide": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-styleguide/185d794b54aa740a9b8a053a7541d87032d4ce86/openmrs-esm-styleguide.js",
-    "@openmrs/esm-home": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-home/c4c4b696165b2e24c8624884fa167e01af46a544/openmrs-esm-home.js",
-    "@openmrs/esm-primary-navigation": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-primary-navigation/c02987bf122ecc15203b2695b0303cfc159efd34/openmrs-esm-primary-navigation.js",
+    "@openmrs/esm-root-config": "https://ampath-poc-test.fra1.digitaloceanspaces.com/root-config/228028ebe6465c6fbfb5bf7f0f3563c4a43962ec/root-config.js",
+    "@openmrs/esm-login": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-login/d51a4bba366172b0ffd8a9cf9a06474efe48e0aa/openmrs-esm-login.js",
+    "@openmrs/esm-devtools": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-devtools/b620d1be9901e663fe74aff3c278780e003cb58c/openmrs-esm-devtools.js",
+    "@openmrs/esm-api": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-api/7a65b9daa71ec153fb43cfa0c3693d70f64d0f9d/openmrs-esm-api.js",
+    "@openmrs/esm-styleguide": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-styleguide/68db60355533cbf02dcbcb8e7d191716f5b4d16e/openmrs-esm-styleguide.js",
+    "@openmrs/esm-home": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-home/b19dd3ba77c8163cfe9ae8de6c8a6162f2fcbdb6/openmrs-esm-home.js",
+    "@openmrs/esm-primary-navigation": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-primary-navigation/36b7e7c7a1cfd1aa2ff0541216ce21308b07ee59/openmrs-esm-primary-navigation.js",
     "@openmrs/esm-error-handling": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-error-handling/18b9802f303b699d625344d20b56bcc26428f277/openmrs-esm-error-handling.js",
-    "@openmrs/esm-patient-chart": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-patient-chart/4c6e8707fe0df6e14923072cbd9d7bc5a354a5e8/openmrs-esm-patient-chart.js",
+    "@openmrs/esm-patient-chart": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-patient-chart/cc68a04bd0b0e7e523b3f14efde33a3053b668b8/openmrs-esm-patient-chart.js",
     "@openmrs/esm-module-config": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-module-config/f57d4227474f51c2a371a86a1e6155f3fbac9ece/openmrs-esm-module-config.js",
-    "@openmrs/esm-patient-chart-widgets": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-patient-chart-widgets/82cb347aa03005704f0727fe65ca0eb84442d754/openmrs-esm-patient-chart-widgets.js"
+    "@openmrs/esm-patient-chart-widgets": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-patient-chart-widgets/90dde810b631cd693ec264002b3d449dc3f1eab0/openmrs-esm-patient-chart-widgets.js"
   }
 }
