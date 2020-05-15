@@ -17,7 +17,7 @@
     "@openmrs/esm-primary-navigation": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-primary-navigation/36b7e7c7a1cfd1aa2ff0541216ce21308b07ee59/openmrs-esm-primary-navigation.js",
     "@openmrs/esm-error-handling": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-error-handling/18b9802f303b699d625344d20b56bcc26428f277/openmrs-esm-error-handling.js",
     "@openmrs/esm-patient-chart": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-patient-chart/cc68a04bd0b0e7e523b3f14efde33a3053b668b8/openmrs-esm-patient-chart.js",
-    "@openmrs/esm-module-config": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-module-config/f57d4227474f51c2a371a86a1e6155f3fbac9ece/openmrs-esm-module-config.js",
+    "@openmrs/esm-module-config": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-module-config/f666d8ae2c5fb979e6efc8887c7fa99ba9f2567f/openmrs-esm-module-config.js",
     "@openmrs/esm-patient-chart-widgets": "https://spa-modules.nyc3.digitaloceanspaces.com/@openmrs/esm-patient-chart-widgets/90dde810b631cd693ec264002b3d449dc3f1eab0/openmrs-esm-patient-chart-widgets.js"
   }
 }
